@@ -145,7 +145,7 @@ It’s like restarting the entire game from zero.
 
 ---
 
-# ⭐ Final Summary (Short Version You Can Tell the Student)
+# ⭐ Final Summary 
 
 1. **Added a `gameOver` flag**
    So the game can stop when someone wins.
