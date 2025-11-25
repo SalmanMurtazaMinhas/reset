@@ -46,8 +46,29 @@ if (p1Score >= winningScore || p2Score >= winningScore) {
     gameOver = true;
     freezBall = true;
     countdownActive = false;
-    ...
-}
+
+    // optional: show winner text under the canvas
+    if (p1Score >= winningScore) {
+      resultEl.textContent = 'Player 1 wins!';
+    } else {
+      resultEl.textContent = 'Player 2 wins!';
+    }
+
+    // draw final frame with winner text on canvas
+    clearCanvas();
+    createNet();
+    scoreText();
+    createBall();
+    createPaddle(p1Paddle);
+    createPaddle(p2Paddle);
+
+    ctx.font = "40px Arial";
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "center";
+    ctx.fillText("Game Over", canvasEl.width / 2, canvasEl.height / 2);
+
+    resetEl.style.display = 'inline-block';
+  }
 ```
 
 **Why:**
